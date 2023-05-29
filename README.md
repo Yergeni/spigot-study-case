@@ -44,8 +44,9 @@ After these steps, your application should be running on http://localhost:5173
 *NOTE:* if your React App initializes using a different port, you will need to change the port information on [line #24](https://github.com/Yergeni/spigot-study-case/blob/fd7cef7daa41783226b8949febf8706d3f5f70ab/api/index.js#L24) from **/api/index.js** file. This is needed to avoid CORS issues.
 
 # Improvements
-- Validations on forms.
-- Styles (It may be better to pick a CSS Library like TailwindJS)
+- Add Validations on forms.
+- Styles (It may be better to pick a CSS Library like TailwindCSS)
+- Add a user profile page with logic to modify the user information.
+- Improve featured CSS by using a banner idea.
 - Improve UX by adding error handling and notifications.
 - Server refactorizations.
-- Etc.
