@@ -20,7 +20,7 @@
 
 .post-page_featured-icon {
 	width: 4rem;
-	color: rgb(238, 206, 28);
+	color: var(--featured-color);
 }
 
 .post-page_btn-icon {
