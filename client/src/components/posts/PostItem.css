@@ -1,9 +1,9 @@
 .post_container {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 2rem;
+	gap: 1rem;
 	margin-bottom: 2rem;
-	padding-right: 1rem;
+	border-bottom: 1px solid rgba(179, 177, 179, 1);
 }
 
 .post_image img {
@@ -13,6 +13,8 @@
 
 @media screen and (min-width: 600px) {
 	.post_container {
+		padding-right: 1rem;
+		border-bottom: none;
 		grid-template-columns: 0.6fr 1.2fr;
 		-webkit-box-shadow: 8px 8px 10px -8px rgba(179, 177, 179, 1);
 		-moz-box-shadow: 8px 8px 10px -8px rgba(179, 177, 179, 1);
