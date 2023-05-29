@@ -20,7 +20,7 @@ Spigot case study project.
 - NodeJS 
 - Create a MongoDB database following [these steps](https://www.mongodb.com/basics/create-database#option-1).
 
-*NOTE:* Changes might be needed to the function handling the connection to the MongoDB. Check **api/utils.js** line #5
+*NOTE:* Changes might be needed to the function handling the connection to the MongoDB. Check **/api/utils.js** [line #5](https://github.com/Yergeni/spigot-study-case/blob/fd7cef7daa41783226b8949febf8706d3f5f70ab/api/utils.js#L5)
 
 To run this project locally follow these instructions:
 
@@ -32,7 +32,7 @@ To run this project locally follow these instructions:
 
 After these steps, your server should be running using port 4000.
 
-*NOTE:* if you want to use a different port you will need to change the line #2 from **/client/src/common/constant.ts** file
+*NOTE:* if you want to use a different port you will need to change the [line #2](https://github.com/Yergeni/spigot-study-case/blob/fd7cef7daa41783226b8949febf8706d3f5f70ab/client/src/common/constants.ts#L2) from **/client/src/common/constant.ts** file
 
 ### Client-side setup
 1. Go to the *client* folder using `> cd client`
@@ -41,7 +41,7 @@ After these steps, your server should be running using port 4000.
 
 After these steps, your application should be running on http://localhost:5173
 
-*NOTE:* if your React App initializes using a different port, you will need to change the port information on line #24 from **/api/index.js** file. This is needed to avoid CORS issues.
+*NOTE:* if your React App initializes using a different port, you will need to change the port information on [line #24](https://github.com/Yergeni/spigot-study-case/blob/fd7cef7daa41783226b8949febf8706d3f5f70ab/api/index.js#L24) from **/api/index.js** file. This is needed to avoid CORS issues.
 
 # Improvements
 - Validations on forms.

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 async function connectToDb() {
 	await mongoose.connect(
-		`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.a5vd6e1.mongodb.net/?retryWrites=true&w=majority`
+		`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}.mongodb.net/?retryWrites=true&w=majority`
 	);
 }
 
@@ -15,4 +15,4 @@ function createFileName(name, path) {
 	return path + extension;
 }
 
-module.exports = {connectToDb, createFileName};
+module.exports = { connectToDb, createFileName };
