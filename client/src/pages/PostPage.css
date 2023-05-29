@@ -1,0 +1,81 @@
+/* Post loading and null states */
+.post-page_loading {
+	text-align: center;
+	color: rgb(105, 109, 110);
+}
+
+.post-page_title-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.post-page_icon-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.post-page_featured-icon {
+	width: 4rem;
+	color: rgb(238, 206, 28);
+}
+
+.post-page_btn-icon {
+	width: 1rem;
+	color: white;
+}
+
+.post-page_title {
+	text-align: center;
+}
+
+.post-page_actions {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	max-width: 500px;
+	min-width: 350px;
+	margin: 1rem auto;
+}
+
+.post-page_image {
+	display: flex;
+	max-height: 350px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.post-page_description img,
+.post-page_image img {
+	width: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.post-page_post-info {
+	text-align: center;
+	font-weight: 500;
+	margin-top: -1rem;
+	margin-bottom: 1.5rem;
+	color: rgb(105, 109, 110);
+}
+
+.post-page_edit-btn {
+	max-width: 128px;
+}
+
+.post-page_divider {
+	margin: 2rem auto;
+	height: 1px;
+	background-color: rgb(0, 0, 0);
+	opacity: 0.2;
+}
+
+.post-page_description img {
+	max-width: 50%;
+	object-fit: cover;
+	object-position: center center;
+}

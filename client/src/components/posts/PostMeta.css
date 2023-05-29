@@ -1,0 +1,15 @@
+.post-meta_divider {
+	height: 1px;
+	background-color: rgb(0, 0, 0);
+	opacity: 0.2;
+}
+
+.post-meta_flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.post-meta_flex-container-gap {
+  gap: .5rem;
+}
