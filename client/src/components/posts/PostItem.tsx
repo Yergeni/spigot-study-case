@@ -19,16 +19,19 @@ export default function PostItem({ post }: PostItemProps) {
 					<img src={`${API_BASE_URL}/${post.image}`} alt="post cover" />
 				</Link>
 			</div>
-			<div>
+			<div className="post-info_container">
+				{/* Banner */}
+				{post.featured && (
+					<div className="post-info_banner">
+						<div className="post-info_banner-container">
+							<div className="post-info_banner-element">Featured</div>
+						</div>
+					</div>
+				)}
 				<div className="post_title-container">
 					<Link className="post_title" to={`${ALL_POSTS_PATH}/${post.id}`}>
 						<h2>{post.title}</h2>
 					</Link>
-					{post.featured && (
-						<div className="post_featured-icon-container">
-							<CheckBadgeIcon className="post_featured-icon" />
-						</div>
-					)}
 				</div>
 				<p className="post_info">
 					{/* TODO: profile page */}
@@ -40,10 +43,9 @@ export default function PostItem({ post }: PostItemProps) {
 				<p className="post_info">
 					<time>Created on: {dateTimeFormatter(new Date(post.createdAt))}</time>
 				</p>
-				{/* <p className="post_info">
-					<time>Updated on: {dateTimeFormatter(new Date(post.updatedAt))}</time>
-				</p> */}
-				<p>{post.summary}</p>
+				<div className="post_summary ">
+					<p>{post.summary}</p>
+				</div>
 			</div>
 		</div>
 	);
