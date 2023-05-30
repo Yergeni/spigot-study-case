@@ -57,4 +57,5 @@ _NOTE:_ if your React App initializes using a different port, you will need to c
 - Add a user profile page with logic to modify the user information and show post related to them.
 - ~~Improve featured CSS by using a banner idea.~~ <span style="color: green; font-weight: bold">DONE</span>
 - Improve UX by adding better error handling and notifications.
+- Add Like, add to favorite, comments, and other features.
 - Server refactorizations.
