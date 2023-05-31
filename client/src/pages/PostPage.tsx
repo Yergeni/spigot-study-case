@@ -5,7 +5,7 @@ import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
 import { TrashIcon } from "@heroicons/react/24/solid";
 
-import { ROUTES, API_BASE_URL, ALL_POSTS_PATH } from "../common/constants";
+import { ROUTES, API_BASE_URL, API_POST_PATH, POSTS_ROUTE } from "../common/constants";
 
 import { IPost } from "../components/posts/post.types";
 
@@ -33,7 +33,7 @@ export default function PostPage() {
 		const fetchPost = async () => {
 			setLoading(true);
 			axiosInstance
-				.get(`${ALL_POSTS_PATH}/${id}`)
+				.get(`${API_POST_PATH}/${id}/post`)
 				.then((response) => {
 					setPost(convertToPost(response.data));
 				})
@@ -50,7 +50,7 @@ export default function PostPage() {
 
 	const handleFeaturedPost = async () => {
 		axiosInstance
-			.patch(`${ALL_POSTS_PATH}/${id}/featured`)
+			.patch(`${API_POST_PATH}/${id}/featured`)
 			.then((response) => {
 				setPost({ ...(post as IPost), featured: response.data.featured });
 			})
@@ -64,7 +64,7 @@ export default function PostPage() {
 
 		if (selection) {
 			axiosInstance
-				.delete(`${ALL_POSTS_PATH}/${id}/delete`, { withCredentials: true })
+				.delete(`${API_POST_PATH}/${id}/delete`, { withCredentials: true })
 				.then((response) => {
 					if (response.status === 200) {
 						navigate(ROUTES.HOME);
@@ -106,7 +106,7 @@ export default function PostPage() {
 									<Button
 										variant="terciary"
 										onClick={() =>
-											navigate(`${ALL_POSTS_PATH}/${post.id}/edit`)
+											navigate(`${POSTS_ROUTE}/${post.id}/edit`)
 										}
 									>
 										<div className="post-page_icon-container">

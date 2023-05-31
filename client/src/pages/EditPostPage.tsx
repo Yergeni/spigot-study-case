@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useUserContext } from "../context/useUserContext";
 
-import { ROUTES, ALL_POSTS_PATH } from "../common/constants";
+import { ROUTES, POSTS_ROUTE, API_POST_PATH } from "../common/constants";
 
 import { PostFormData } from "../components/posts/post.types";
 import { convertToPost } from "../components/posts/post.utils";
@@ -28,14 +28,13 @@ export default function EditPostPage() {
 	const [formData, setFormData] = useState<PostFormData>(inittialValues);
 	const [description, setDescription] = useState("");
 
-  // Same for Router and API call
-	const postPath = `${ALL_POSTS_PATH}/${id}`;
+	const postRoute = `${POSTS_ROUTE}/${id}`;
 
 	useEffect(() => {
 		const fetchPost = async () => {
 			setLoading(true);
 			axiosInstance
-				.get(postPath)
+				.get(`${API_POST_PATH}/${id}/post`)
 				.then((response) => {
 					const post = convertToPost(response.data);
 					if (user?.id === post.author.id) {
@@ -79,12 +78,12 @@ export default function EditPostPage() {
 		e.preventDefault();
 
 		axiosInstance
-			.put(postPath, data, {
+			.put(`${API_POST_PATH}/${id}/update`, data, {
 				headers: { "Content-Type": "multipart/form-data" },
 				withCredentials: true,
 			})
 			.then(() => {
-				navigate(postPath);
+				navigate(postRoute);
 			})
 			.catch((error) => {
 				console.error("CREATE POST ERROR: ", error);
@@ -120,7 +119,7 @@ export default function EditPostPage() {
 			/>
 			<div className="post-form_btn-actions">
 				<Button>Update Post</Button>
-				<Button variant="secondary" onClick={() => navigate(postPath)}>
+				<Button variant="secondary" onClick={() => navigate(postRoute)}>
 					Cancel
 				</Button>
 			</div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ALL_POSTS_PATH } from "../common/constants";
+import { GET_ALL_POSTS_PATH } from "../common/constants";
 
 import Post from "../components/posts/PostItem";
 
@@ -18,7 +18,7 @@ export default function PostListPage() {
 		const fetchPosts = async () => {
 			setLoading(true);
 			axiosInstance
-				.get(ALL_POSTS_PATH)
+				.get(GET_ALL_POSTS_PATH)
 				.then((response) => {
 					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					const posts: IPost[] = response.data.map((post: any) => {

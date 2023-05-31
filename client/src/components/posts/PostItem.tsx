@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 
 import { IPost } from "./post.types";
 import { dateTimeFormatter } from "../../utils/date.utils";
-import { API_BASE_URL, ALL_POSTS_PATH } from "../../common/constants";
+import { API_BASE_URL, POSTS_ROUTE } from "../../common/constants";
 
 import "./PostItem.css";
 
@@ -15,7 +14,7 @@ export default function PostItem({ post }: PostItemProps) {
 	return (
 		<div className="post_container">
 			<div className="post_image">
-				<Link to={`${ALL_POSTS_PATH}/${post.id}`}>
+				<Link to={`${POSTS_ROUTE}/${post.id}`}>
 					<img src={`${API_BASE_URL}/${post.image}`} alt="post cover" />
 				</Link>
 			</div>
@@ -29,7 +28,7 @@ export default function PostItem({ post }: PostItemProps) {
 					</div>
 				)}
 				<div className="post_title-container">
-					<Link className="post_title" to={`${ALL_POSTS_PATH}/${post.id}`}>
+					<Link className="post_title" to={`${POSTS_ROUTE}/${post.id}`}>
 						<h2>{post.title}</h2>
 					</Link>
 				</div>

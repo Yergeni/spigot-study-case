@@ -54,8 +54,10 @@ _NOTE:_ if your React App initializes using a different port, you will need to c
 
 - Add Validations on forms.
 - Styles (It may be helpful to pick a CSS Library like TailwindCSS)
-- Add a user profile page with logic to modify the user information and show post related to them.
+- Add a user profile page with logic to modify the user information and show posts related to them.
 - ~~Improve featured CSS by using a banner idea.~~ <span style="color: green; font-weight: bold">DONE</span>
-- Improve UX by adding better error handling and notifications.
-- Add Like, add to favorite, comments, and other features.
+- Improve UX by adding better error handling, loading states, and notifications.
+- Implement loading more posts by adding features like pagination or infinite scrolling.
+- Add Like, add to favorites, comments, and other features.
+- Add search and filter functionalities.
 - Server refactorizations.
