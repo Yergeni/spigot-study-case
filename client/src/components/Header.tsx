@@ -15,7 +15,7 @@ export default function Header() {
 	useEffect(() => {
 		const fetchUser = async () => {
 			axiosInstance
-				.get(PROFILE_PATH)
+				.get(PROFILE_PATH, { withCredentials: true })
 				.then((response) => {
 					setUser({
 						id: response.data.user.id,
@@ -35,7 +35,7 @@ export default function Header() {
 	}, []);
 
 	const handleLogout = () => {
-		axiosInstance.post(LOGOUT_PATH).then(() => setUser(null));
+		axiosInstance.post(LOGOUT_PATH, { withCredentials: true }).then(() => setUser(null));
 		navigate(ROUTES.LOGIN, { replace: true });
 	};
 
