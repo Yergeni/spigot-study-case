@@ -111,7 +111,7 @@ async function logoutUser (req, res) {
 /**
  * Profile user route
  * @description Profile a new user and set the access token
- * @route  POST /api/users/profile
+ * @route  GET /api/users/profile
  * @access Protected
  */
 async function userProfile (req, res) {
