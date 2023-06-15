@@ -42,7 +42,7 @@ export default function RegisterPage() {
 				password: formData.password,
 			})
 			.then((response) => {
-				if (response.status === 200) {
+				if (response.status === 201) {
 					setUser({
 						id: response.data.id,
 						username: response.data.username,
