@@ -1,6 +1,4 @@
 import express from "express";
-import multer from "multer";
-const uploadMiddleware = multer({ dest: "uploads/" });
 
 import {
 	createPost,
@@ -9,9 +7,10 @@ import {
 	getAllPosts,
 	getPostById,
 	updatePost,
-} from "../controllers/post-controller.js";
+} from "../controllers/postController.js";
 
-import { validateAuthorization } from "../utils.js";
+import validateAuthorization from "../middleware/authMiddleware.js";
+import uploadMiddleware from "../middleware/uploadMiddleware.js";
 
 const router = express.Router();
 
