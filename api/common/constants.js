@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const NODE_ENV = process.env.NODE_ENV;
-const SERVER_PORT = process.env.PORT;
+const SERVER_PORT = process.env.SERVER_PORT;
 const MONGO_DB_URI = process.env.MONGODB_URI;
 const JWT_SECRET = process.env.JWT_SECRET;
 const JWT_NAME = "auth_token";

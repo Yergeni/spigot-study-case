@@ -6,11 +6,11 @@ import cookieParser from "cookie-parser";
 import { SERVER_PORT, UPLOADS_PATH } from "./common/constants.js";
 
 /* Utils */
-import { getDirName } from "./utils.js";
+import { getDirName } from "./utils/getAbsoluteDirName.js";
 
 /* Routes */
 import userRoutes from "./routes/userRoutes.js";
-import postRoutes from "./routes/post-routes.js";
+import postRoutes from "./routes/postRoutes.js";
 
 /* Error Handler Middlewares */
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
